@@ -1,0 +1,21 @@
+!!DEVELOPER TOOLS MANDATORY BROSWER ADD ON:
+
+For Chrome: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en 
+
+For Firefox: https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
+
+For Edge: https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil 
+
+!!WHAT is React??:
+- JS library 
+- What is a library?: https://careerfoundry.com/en/blog/web-development/programming-library-guide/ 
+- Created by Meta (facebook) around 2010
+- Released to public 2013 
+- One of the most popular front-end libraries 
+
+
+!!WHY React?
+- React has the ability to do client side rendering and server side rendering
+- Single Page Application (SPA) we only have 1 HTML file and we use JS to write components that will load in that HTML file and seamlessly change what the user sees and interacts with 
+- Virtual DOM is a lightweight version of the standard DOM that syncs up and allows the regular DOM to change specific pieces as the virtual DOM does
+This is more efficient than changing the whole DOM as changing the whole DOM means we have to reload everything even if we are only changing one or a couple things on the web page
