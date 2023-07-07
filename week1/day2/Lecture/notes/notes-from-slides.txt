@@ -6,7 +6,7 @@ For Firefox: https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
 
 For Edge: https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil 
 
-!!WHAT is React??:
+!!WHAT is React?:
 - JS library 
 - What is a library?: https://careerfoundry.com/en/blog/web-development/programming-library-guide/ 
 - Created by Meta (facebook) around 2010
