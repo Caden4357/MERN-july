@@ -15,13 +15,53 @@ const checkArr = (arr, val) => {
 console.log(checkArr([1,2,3,4,5], 38));
 
 
-// * refactor function above
 
+// * refactor function above
+// const checkArrRefactored = (arr, val) => {
+//     return arr.includes(val)
+// }
+
+const checkArrRefactored = (arr, val) => arr.includes(val)
+
+console.log(checkArrRefactored([1,2,3,4,5], 5));
 
 
 // * Given an array and a value write a function that returns a count of how many times that value appears in the array
 // * Array can contain numbers or strings. value can be either.
 // * Return the count of the value
+// declare new function that takes in 2 params ✅
+// declare a variable for the count of how many times the value appears in the array ✅
+// write a loop to go through the array ✅
+// condtional to check if the value is === arr[idx]✅
+// if the conditional is true increment the counter ✅
+// if false do nothing 
+// return count ✅
+const countValInArr = (arr, val) => {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++){
+        if(arr[i] === val){
+            count++
+        }
+    }
+    return count;
+}
+let result = countValInArr([1,2,3,4,5,5,5,'6'], 6)
+console.log(result);
+// console.log(countValInArr([1,2,3,4,5,5,5,6], 5));
+
+// assignment operator
+let x = 5
+
+// comparison operator not checking data type only value 
+console.log(5 == '5');
+
+// strict comparison checking data type AND value
+console.log(5 === '5');
+
+
+
+
+
 
 
 

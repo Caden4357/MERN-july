@@ -1,0 +1,17 @@
+!!Programming paradigm:
+- A programming paradigm refers to a specific approach or style of programming that guides the design and structure of  computer programs. It represents a set of principles, concepts, and techniques that programmers can use to solve problems and write code. Different programming paradigms emphasize different concepts and have their own unique ways of organizing code, managing state, and expressing computations.
+
+!!Functional programming:
+Functional programming is a programming paradigm that focuses on building software by composing pure functions, avoiding shared state, mutable data, and side effects.
+
+
+!!Here are a few key concepts of functional programming:
+- Pure Functions: In functional programming, functions are treated as first-class citizens. A pure function always produces the same output for the same inputs and doesn't modify any external state. It relies only on its input parameters and returns a new value without altering the original data. This property makes pure functions predictable, testable, and easier to reason about.
+
+- Immutability: Functional programming promotes immutability, which means once a value is created, it cannot be changed. Instead of modifying existing data, functional programming favors creating new data structures that incorporate changes. This helps prevent unexpected side effects and makes the code more robust.
+
+- Higher-order Functions: Functional programming often leverages higher-order functions, which are functions that can accept other functions as arguments or return functions as results. Higher-order functions enable code reuse and provide a way to abstract common patterns.
+
+- Function Composition: Functional programming encourages composing functions by combining them together to form new functions. This allows you to build complex behavior by chaining smaller, reusable functions in a declarative and readable manner. Function composition promotes code modularity and helps separate concerns.
+
+- Avoidance of Mutable State: In functional programming, mutable state is minimized or eliminated altogether. State changes are managed through immutability and pure functions, reducing the complexity of debugging and reasoning about the code.
