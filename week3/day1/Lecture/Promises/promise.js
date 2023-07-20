@@ -99,6 +99,6 @@ const fetchData = (url) => {
 fetchData('https://api.example.com/person/2')
     .then((res) => {
         console.log(res);
-        setData(res.data)
+        // setData(res.data)
     })
     .catch((err) => console.log(err))
