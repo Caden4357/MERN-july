@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1{
+  font-size: 48px;
+}
+body{
+  background-color: rgb(0, 8, 63);
+  color: white;
+}
+.about{
+  background-color:yellow;
+  color: black;
+}
+.home{
+  background-color: green;
+  color: white;
+}
+.contact{
+  background-color: red;
+  color: white;
+}
