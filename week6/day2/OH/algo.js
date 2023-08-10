@@ -55,17 +55,6 @@ const filterAthletes = (id) => {
 const newTeam = filterAthletes(2)
 console.log(newTeam);
 
-// ? Build a function that takes the list of 'coordinates' and 'num' above and returns back a number of how many times x+y === num
-// ? the output with the data provided should be 2
-
-let coordinates = [
-    {x:1, y:2}, // false
-    {x:3, y:1}, // false
-    {x:4, y:6}, // true count:1 
-    {x:5, y:5}, // true count:2
-];
-let num = 10;
-
 
 // ! Hackerrank Link To The Problem: https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem 
 // ? Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. She tabulates the number of times she breaks her season record for most points and least points in a game. Points scored in the first game establish her record for the season, and she begins counting from there.
@@ -96,3 +85,38 @@ const breakingRecords = (scores) => {
     return results
 }
 console.log(breakingRecords(scores));
+
+
+
+
+// ? Build a function that takes the list of 'coordinates' and 'num' below and returns back a number of how many times x+y === num
+// ? the output with the data provided should be 2
+
+let coordinates = [
+    {x:1, y:2}, // false
+    {x:3, y:1}, // false
+    {x:4, y:6}, // true count:1 
+    {x:5, y:5}, // true count:2
+]; // array
+let num = 10; //number 
+// * 1.) Declare a function coordinatesMatch that takes in 2 params (an array of objects and a number)
+// * 2.) declare a variable for count=0
+// * 3.) loop through the array arr[idx]
+// * 4.) check IF x+y === 10 if it does count++
+// * 5.) return count 
+const coordinatesMatch = (coord, num) => {
+    // let count = 0;
+    // for (let index = 0; index < coord.length; index++) {
+    //     if(coord[index].x + coord[index].y === num){
+    //         count++
+    //     }
+    // }
+    // for (idx in coord){
+    //     console.log(coord[idx]);
+    // }
+    for (item of coord){
+        console.log(item.x + item.y);
+    }
+    // return count
+}
+console.log(coordinatesMatch(coordinates, num));

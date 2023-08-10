@@ -6,6 +6,16 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const increment = () => {
+    //         0 + 1
+    // setCount(count + 1) // 1 
+    // //         0 + 1
+    // setCount(count + 1) // 2
+    //          1
+    setCount((prevState) => prevState + 1) 
+    //         1
+    setCount((prevState) => prevState + 1) 
+  }
   return (
     <>
       <div>
@@ -18,7 +28,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={increment} style={{color:'white'}}>
           count is {count}
         </button>
         <p>
