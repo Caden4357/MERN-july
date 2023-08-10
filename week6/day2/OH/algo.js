@@ -105,18 +105,12 @@ let num = 10; //number
 // * 4.) check IF x+y === 10 if it does count++
 // * 5.) return count 
 const coordinatesMatch = (coord, num) => {
-    // let count = 0;
-    // for (let index = 0; index < coord.length; index++) {
-    //     if(coord[index].x + coord[index].y === num){
-    //         count++
-    //     }
-    // }
-    // for (idx in coord){
-    //     console.log(coord[idx]);
-    // }
-    for (item of coord){
-        console.log(item.x + item.y);
+    let count = 0;
+    for (let index = 0; index < coord.length; index++) {
+        if(coord[index].x + coord[index].y === num){
+            count++
+        }
     }
-    // return count
+    return count
 }
 console.log(coordinatesMatch(coordinates, num));
