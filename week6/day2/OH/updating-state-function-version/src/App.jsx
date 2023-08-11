@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  const increment = () => {
+  const increment = async () => {
     //         0 + 1
     // setCount(count + 1) // 1 
     // //         0 + 1
@@ -28,7 +28,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={increment} style={{color:'white'}}>
+        <button onClick={setCount((count) => count + 1)} style={{color:'white'}}>
           count is {count}
         </button>
         <p>
