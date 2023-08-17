@@ -1,0 +1,23 @@
+Main Overview: A social commerce marketplace where users can buy and sell new and secondhand fashion, home goods, and electronics. Like Ebay, Poshmark OfferUp etc.
+
+Backend: 
+    -Models: User model, Product model. This will be a 1:m relationship
+    -What fields are the models going to have? 
+        -User: 
+            fname:string
+            lname:string
+            email:string
+            password:string
+            CPassword:virtual
+            location?: maybe ipAPI -> https://ip-api.com/ (probably best option) OR just the have the user enter city/state manually 
+            rating:number (between 1-10)
+        -Product:
+            -ProductName:string
+            -Price:number
+            -ProductCondition:(new or used) --> Enum?
+            -Category: Enum 5 or 6 that almost any product could fall under 
+            -Stretch goal: Sub Categories
+            -UserId:ObjectId
+        Product/SellerReview:
+            StretchGoal
+

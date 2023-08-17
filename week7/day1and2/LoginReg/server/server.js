@@ -4,7 +4,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
 require("./config/mongoose.config");
-app.use(cors({credentials:true, origin:'http://127.0.0.1:5173'}));
+app.use(cors({credentials:true, origin:'http://localhost:5173'}));
 app.use(express.json(), express.urlencoded({ extended: true }));
 app.use(cookieParser())
 
