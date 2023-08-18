@@ -9,15 +9,25 @@ Backend:
             email:string
             password:string
             CPassword:virtual
-            location?: maybe ipAPI -> https://ip-api.com/ (probably best option) OR just the have the user enter city/state manually 
-            rating:number (between 1-10)
+            location: ipAPI 
+            rating?:number (between 1-10)
         -Product:
             -ProductName:string
             -Price:number
+            -ProductImage?: string
             -ProductCondition:(new or used) --> Enum?
             -Category: Enum 5 or 6 that almost any product could fall under 
             -Stretch goal: Sub Categories
             -UserId:ObjectId
+            -Interested?: number 
+        -Interested?:
+            productID
+            UserId
         Product/SellerReview:
             StretchGoal
+Functionality/features:
+    - My user should be able to login, logout &/or register, post, buy, remove their OWN products or update them and message users (stretch goal is rating a seller / product) 
+    - A user must have an account and be logged in to use the website / sell / buy products / rate products/sellers etc.
+    
+
 
