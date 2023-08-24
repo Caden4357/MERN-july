@@ -14,6 +14,14 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         // required: [true, "Product image is required"],
     },
+    city:{
+        type: String,
+        required: [true, "City is required"]
+    },
+    state:{
+        type: String,
+        required: [true, "State is required"]
+    },
     description: {
         type: String,
         required: [true, "Product description is required"],

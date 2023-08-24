@@ -20,6 +20,7 @@ const Dashboard = (props) => {
     return (
         <div>
             <h2 className='text-white text-4xl text-center'>Hello {loggedInUser?.firstName}</h2>
+            <h2 className='text-white text-4xl text-center'>Your Located In {loggedInUser.city}, {loggedInUser.state}</h2>
         </div>
 )}
 

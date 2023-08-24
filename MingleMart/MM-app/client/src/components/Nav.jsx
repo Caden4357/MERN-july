@@ -25,7 +25,7 @@ const Nav = (props) => {
                     <div className="flex justify-around items-center w-3/12">
                         <Link className='bg-slate-300 p-2 rounded-lg text-lg ' to={'/dashboard'}>Dashboard</Link>
                         <Link className='bg-slate-300 p-2 rounded-lg text-lg ' to={`/`}>Profile</Link>
-                        <Link to={'/'} className='bg-blue-300 p-2 rounded-lg text-lg'>Sell Your Stuff</Link>
+                        <Link className='bg-blue-300 p-2 rounded-lg text-lg' to={'/sellProduct'} >Sell Your Stuff</Link>
                         <button className='bg-pink-300 p-2 rounded-lg text-lg ' onClick={logout}>Logout</button>
                     </div>
                 </nav>
