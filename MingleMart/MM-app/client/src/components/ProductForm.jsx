@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+import Loading from './Loading';
 const ProductForm = (props) => {
+    const navigate = useNavigate();
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const [product, setProduct] = useState({
         name: '',
         price:'',
@@ -43,23 +47,20 @@ const ProductForm = (props) => {
     };
 
     const submitHandler = (e) => {
+        setIsSubmitted(true);
         e.preventDefault();
-        const formData = new FormData();
-        formData.append('name', product.name);
-        formData.append('price', product.price);
-        formData.append('image', product.image);
-        formData.append('city', product.city);
-        formData.append('state', product.state);
-        formData.append('description', product.description);
-        formData.append('category', product.category);
-        // ! Start day3 here! Check routes and controllers
-        axios.post('http://localhost:8000/api/products', formData, {withCredentials: true})
+        let formData = new FormData();
+        for(let [key, value] of Object.entries(product)){
+            formData.append(key, value);
+        }
+        // !start here
+        axios.post('http://localhost:8000/api/createProduct', formData, { withCredentials: true })
             .then((res) => {
-                console.log(res);
+                navigate('/dashboard');
             })
             .catch((err) => {
-                console.log(err.response);
-            });
+                console.log(err);
+            })
     };
 
     return (
@@ -79,7 +80,9 @@ const ProductForm = (props) => {
                     <option value="Vehicles">Vehicles</option>
                     <option value="Other">Other</option>
                 </select>
-                <button className='border-2 text-red-50 p-2 block mx-auto'>Register</button>
+                {
+                    isSubmitted ? <Loading/> : <button className='border-2 text-red-50 p-2 block mx-auto'>Sell</button>
+                }
             </form>
         </div>
 )}

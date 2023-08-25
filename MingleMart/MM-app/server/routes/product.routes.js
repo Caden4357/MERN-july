@@ -1,5 +1,11 @@
 const ProductController = require("../controllers/product.controller");
+const { authenticate } = require('../config/jwt.config');
+const multer = require("multer");
+const { memoryStorage } = require("multer");
+const storage = memoryStorage()
+const upload = multer({storage});
 
 module.exports = (app) => {
-    app.post("/api/createProduct", ProductController.createProduct);
+    app.get("/api/products", authenticate, ProductController.getAllProducts);
+    app.post("/api/createProduct", authenticate, upload.single('image'), ProductController.createProduct);
 }
