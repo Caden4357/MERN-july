@@ -7,5 +7,5 @@ const upload = multer({storage});
 
 module.exports = (app) => {
     app.get("/api/products", authenticate, ProductController.getAllProducts);
-    app.post("/api/createProduct", authenticate, upload.single('image'), ProductController.createProduct);
+    app.post("/api/createProduct", upload.single('image'), ProductController.createProduct);
 }

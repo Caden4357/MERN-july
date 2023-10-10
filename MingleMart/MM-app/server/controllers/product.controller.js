@@ -32,10 +32,8 @@ module.exports = {
         try{
             const result = await uploadToCloudinary(req.file);
             req.body.image = result.url;
-            // console.log('LINE 6 CONTROLLER:',req.body);
-            const decodedJwt = jwt.decode(req.cookies.userToken, { complete: true });
-            // console.log('LINE 8 CONTROLLER:',decodedJwt.payload);
-            req.body.userId = decodedJwt.payload._id;
+            // const decodedJwt = jwt.decode(req.cookies.userToken, { complete: true });
+            // req.body.userId = decodedJwt.payload._id;
             console.log('LINE 10 CONTROLLER:', req.body);
             const product = await Product.create(req.body);
             res.status(201).json(product);
